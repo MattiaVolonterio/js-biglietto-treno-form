@@ -7,6 +7,7 @@ const trainCarriage = document.getElementById("train-carriage");
 const trainNumber = document.getElementById("train-number");
 const ticketResult = document.getElementById("ticket-cost-result");
 const generateClick = document.getElementById("generate-button");
+const ticketGeneartion = document.getElementById("ticket-generation");
 const pricePerKm = 0.21;
 let ticketPrice;
 let discount = 0;
@@ -25,7 +26,7 @@ generateClick.addEventListener("click", function () {
   //   Randomizzazione numero biglietto
   trainNumber.innerText = Math.floor(Math.random() * 9999 + 1);
 
-  if (isNaN(distanceValue)) {
+  if (isNaN(distanceValue) || distanceValue < 0) {
     alert("I dati inseriti non sono corretti, ricarica la pagina");
   } else {
     ticketPrice = distanceValue * pricePerKm;
@@ -44,5 +45,7 @@ generateClick.addEventListener("click", function () {
     const ticketDiscount = (ticketPrice * discount) / 100;
     ticketPrice -= ticketDiscount;
     ticketResult.innerText = `${ticketPrice.toFixed(2)}€`;
+
+    ticketGeneartion.className = "d-block";
   }
 });

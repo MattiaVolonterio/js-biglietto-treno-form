@@ -13,6 +13,9 @@
       crossorigin="anonymous"
     />
 
+    <!-- Link css -->
+    <link rel="stylesheet" href="./css/style.css" />
+
     <!-- Link Script Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -79,21 +82,44 @@
       </form>
 
       <!-- Generazione biglietto -->
-      <div class="my-5">
-        <h2>Passeggero</h2>
-        <code class="fs-4" id="ticket-name">aaa</code>
+      <h2 class="mt-5">Il Tuo Biglietto</h2>
+      <div id="ticket-generation" class="d-none">
+        <div
+          class="my-5 d-flex align-items-center justify-content-between px-3"
+          id="ticket"
+        >
+          <!-- Passeggero -->
+          <div class="pe-5 border-end border-black">
+            <h3 class="fs-3 mb-3">Passeggero</h3>
+            <code class="fs-5" id="ticket-name">Mattia Volonterio</code>
+          </div>
 
-        <h3>Tariffa</h3>
-        <code class="fs-4" id="ticket-rate">a</code>
+          <!-- Tariffa -->
+          <div>
+            <h4 class="fs-5 mb-3">Tariffa</h4>
+            <code class="fs-5" id="ticket-rate">Standard</code>
+          </div>
 
-        <h3>Carrozza</h3>
-        <code class="fs-4" id="train-carriage">0</code>
+          <!-- Carrozza -->
+          <div>
+            <h4 class="fs-5 mb-3">Carrozza</h4>
+            <code class="fs-5 d-block text-center" id="train-carriage">9</code>
+          </div>
 
-        <h3>N° Biglietto</h3>
-        <code class="fs-4" id="train-number">0</code>
+          <!-- N° Biglietto -->
+          <div>
+            <h4 class="fs-5 mb-3">N° Biglietto</h4>
+            <code class="fs-5 d-block text-center" id="train-number">9580</code>
+          </div>
 
-        <h3>Costo del biglietto</h3>
-        <code class="fs-4" id="ticket-cost-result">0€</code>
+          <!-- Prezzo del biglietto -->
+          <div>
+            <h4 class="fs-5 mb-3">Costo del biglietto</h4>
+            <code class="fs-5 d-block text-center" id="ticket-cost-result"
+              >2,10€</code
+            >
+          </div>
+        </div>
       </div>
     </div>
   </body>
