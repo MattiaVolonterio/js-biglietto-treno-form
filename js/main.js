@@ -8,6 +8,7 @@ const trainNumber = document.getElementById("train-number");
 const ticketResult = document.getElementById("ticket-cost-result");
 const generateClick = document.getElementById("generate-button");
 const ticketGeneartion = document.getElementById("ticket-generation");
+const resetButton = document.getElementById("reset-button");
 const pricePerKm = 0.21;
 let ticketPrice;
 let discount = 0;
@@ -48,4 +49,8 @@ generateClick.addEventListener("click", function () {
 
     ticketGeneartion.className = "d-block";
   }
+});
+
+resetButton.addEventListener("click", function () {
+  ticketGeneartion.className = "d-none";
 });
