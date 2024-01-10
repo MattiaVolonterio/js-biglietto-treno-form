@@ -24,27 +24,59 @@
     <!-- Link script -->
     <script src="./js/main.js" defer></script>
   </head>
+
   <body>
     <div class="container">
       <h1 class="my-3">Calcolo del prezzo del biglietto del treno</h1>
-      <!-- Input -->
-      <input
-        type="text"
-        name="distance"
-        id="distance-input"
-        placeholder="Inserisci i km da percorrere"
-      />
 
-      <input
-        type="text"
-        name="user_age"
-        id="age-input"
-        placeholder="Inserisci la tua età"
-      />
+      <!-- Form -->
+      <form action="">
+        <div class="row mb-4">
+          <!-- Nome e Cognome -->
+          <div class="col-4">
+            <label for="user-name" class="form-label"
+              >Inserisci Nome e Cognome</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              name="user name"
+              id="user-name"
+            />
+          </div>
 
-      <button type="button" id="generate-button" class="btn btn-primary">
-        Genera Biglietto
-      </button>
+          <!-- Distanza da percorrere -->
+          <div class="col-4">
+            <label for="distance-input" class="form-label"
+              >Inserisci i km da percorrere</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              name="distance"
+              id="distance-input"
+            />
+          </div>
+
+          <!-- Fascia d'età -->
+          <div class="col-4">
+            <label for="age-input" class="form-label"
+              >Seleziona la fascia d'età</label
+            >
+            <select class="form-select" id="age-input">
+              <option value="minorenne">Minorenne</option>
+              <option value="maggiorenne">Maggiorenne</option>
+              <option value="over65">over 65</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Bottoni -->
+        <button type="button" id="generate-button" class="btn btn-primary">
+          Genera Biglietto
+        </button>
+        <button type="reset" class="btn btn-warning">Reset</button>
+      </form>
     </div>
   </body>
 </html>
