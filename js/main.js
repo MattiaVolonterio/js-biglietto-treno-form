@@ -23,7 +23,7 @@ generateClick.addEventListener("click", function () {
   trainCarriage.innerText = Math.floor(Math.random() * 12 + 1);
 
   //   Randomizzazione numero biglietto
-  trainNumber.innerText = Math.floor(Math.random() * 9999 + 1000);
+  trainNumber.innerText = Math.floor(Math.random() * 9999 + 1);
 
   if (isNaN(distanceValue)) {
     alert("I dati inseriti non sono corretti, ricarica la pagina");
@@ -33,18 +33,16 @@ generateClick.addEventListener("click", function () {
     if (userAge == "minorenne") {
       discount = 20;
       ticketRate.innerText = "Sconto 20%";
-      const ticketDiscount = (ticketPrice * discount) / 100;
-      ticketPrice -= ticketDiscount;
-      ticketResult.innerText = `${ticketPrice.toFixed(2)}€`;
     } else if (userAge == "over65") {
       discount = 40;
       ticketRate.innerText = "Sconto 40%";
-      const ticketDiscount = (ticketPrice * discount) / 100;
-      ticketPrice -= ticketDiscount;
-      ticketResult.innerText = `${ticketPrice.toFixed(2)}€`;
     } else {
+      discount = 0;
       ticketRate.innerText = "Tariffa Standard";
-      ticketResult.innerText = `${ticketPrice.toFixed(2)}€`;
     }
+
+    const ticketDiscount = (ticketPrice * discount) / 100;
+    ticketPrice -= ticketDiscount;
+    ticketResult.innerText = `${ticketPrice.toFixed(2)}€`;
   }
 });
